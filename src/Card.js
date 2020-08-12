@@ -1,4 +1,5 @@
 import React from 'react';
+import Chuck from './Chuck';
 
 const Card = ({ name, email, id }) => {
 
@@ -10,6 +11,7 @@ const Card = ({ name, email, id }) => {
                 <h2>{name}</h2>
                 <p>{email}</p>
             </div>
+            <Chuck/>
         </div>
 
     )
