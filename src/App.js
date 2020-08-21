@@ -4,6 +4,7 @@ import CardList from "./CardList";
 import SearchBox from './SearchBox';
 import Scroll from './Scroll'
 import 'tachyons';
+import Chuck from "./Chuck";
 
 class App extends Component {
   constructor() {
@@ -53,6 +54,7 @@ class App extends Component {
             <Scroll>
               <CardList robots={filteredRobots}/>
             </Scroll>
+              <Chuck />
           </div>
         );
 }}}
