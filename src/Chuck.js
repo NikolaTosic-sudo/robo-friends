@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import "./Chuck.css"
 
 
 class Chuck extends Component {
@@ -32,7 +33,7 @@ class Chuck extends Component {
             <div>
                 <h1>Chuck Norris Facts</h1>
                 <p>{this.state.quote}</p>
-                <button onClick={this.getNewFact}>get new fact</button>
+                <button className="btn" onClick={this.getNewFact}>get new fact</button>
             </div>
         )
     }
