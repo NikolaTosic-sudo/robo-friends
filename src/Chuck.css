@@ -1,4 +1,7 @@
 .btn {
     border-radius: 25%;
     padding: 7px;
+    font-family: "Courier Next", courier, monospace;
+    color: white;
+    background: #0ccac4;
 }
