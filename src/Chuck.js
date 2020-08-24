@@ -33,7 +33,7 @@ class Chuck extends Component {
             <div>
                 <h1>Chuck Norris Facts</h1>
                 <p>{this.state.quote}</p>
-                <button className="btn" onClick={this.getNewFact}>get new fact</button>
+                <button className="btn" onClick={this.getNewFact}>Get New Fact</button>
             </div>
         )
     }
