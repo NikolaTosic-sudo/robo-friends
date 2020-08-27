@@ -54,7 +54,6 @@ class App extends Component {
             <Scroll>
               <CardList robots={filteredRobots}/>
             </Scroll>
-              <Chuck />
           </div>
         );
 }}}
