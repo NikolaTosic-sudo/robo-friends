@@ -4,7 +4,6 @@ import CardList from "../Components/CardList";
 import SearchBox from '../Components/SearchBox';
 import Scroll from '../Components/Scroll'
 import 'tachyons';
-import Chuck from "./Chuck";
 
 class App extends Component {
   constructor() {
