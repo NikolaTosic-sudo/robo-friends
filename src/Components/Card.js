@@ -1,6 +1,6 @@
 import React from 'react';
-import Chuck from './Chuck';
-import "./Card.css"
+import Chuck from '../Containers/Chuck';
+import "../assets/Card.css"
 
 const Card = ({ name, email, id }) => {
 
