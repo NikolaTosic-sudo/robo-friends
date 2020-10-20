@@ -1,12 +1,11 @@
 import React from 'react';
 import Chuck from '../Containers/Chuck';
-import "../assets/Card.css"
 
 const Card = ({ name, email, id }) => {
 
     return (
 
-        <div className='tc bg-light-green dib br3 pa3 grow shadow-5 fl ma3 yes'>
+        <div className='tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5'>
             <img src={`https://robohash.org/${id}?180x180`} alt="img"/>
             <div>
                 <h2>{name}</h2>
