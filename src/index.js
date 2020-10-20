@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 import { searchRobots, fetchRobots } from "./reducer";
 
 const logger = createLogger();
-const rootReducer = combineReducers({searchRobots, fetchRobots});
+const rootReducer = combineReducers({ searchRobots, fetchRobots });
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 
 ReactDOM.render(
