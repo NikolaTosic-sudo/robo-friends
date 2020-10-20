@@ -6,45 +6,38 @@ import SearchBox from '../Components/SearchBox';
 import Scroll from '../Components/Scroll'
 import 'tachyons';
 
-import {setSearchField} from "../actions";
+import { setSearchField, fetchRobots } from "../actions";
 
 const mapStateToProps = state => {
     return {
-        searchField: state.searchField
+        searchField: state.searchRobots.searchField,
+        robots: state.fetchRobots.robots,
+        isPending: state.fetchRobots.isPending,
+        error: state.fetchRobots.error
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onFetchRobots: () => dispatch(fetchRobots())
     }
 };
 
 class App extends Component {
 
-    state = {
-      robots: [],
-    };
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => {
-          return response.json();
-        })
-        .then(users => {
-          this.setState({
-            robots: users
-          })
-        })
+        this.props.onFetchRobots()
   }
 
   render() {
 
-    const filteredRobots = this.state.robots.filter(robot => {
+    const filteredRobots = this.props.robots.filter(robot => {
       return robot.name.toLowerCase().includes(this.props.searchField.toLowerCase())
     })
 
-    if(this.state.robots.length === 0) {
+    if(this.props.isPending) {
 
       return <h1>Loading...</h1>
 
