@@ -11,7 +11,6 @@ class Chuck extends Component {
     componentDidMount(){
         axios.get('https://api.chucknorris.io/jokes/random')
             .then(res => {
-                console.log('response', res.data.value, this)
                 this.setState({
                     quote: res.data.value
                 })
@@ -21,7 +20,6 @@ class Chuck extends Component {
     getNewFact = () => {
         axios.get('https://api.chucknorris.io/jokes/random')
             .then(res => {
-                console.log('response', res.data.value)
                 this.setState({
                     quote: res.data.value
                 })
