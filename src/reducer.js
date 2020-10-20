@@ -11,4 +11,4 @@ export const searchRobots = (state = initialState, action = {}) => {
         default:
             return state
     }
-}
+};
